@@ -1,0 +1,274 @@
+
+body
+{
+    background-image: url("images/fond_jaune.png");
+    font-family: 'Trebuchet MS', 'playball', 'Gelasio', arial, sans-serif;
+    width: 50%;
+    margin: auto;
+}
+
+
+
+header
+{
+    background: url("images/separateur.png")    repeat-x bottom;            /*repetition separateur en bas du header*/
+    display: flex;                                                          /*alignement horizontal*/
+    justify-content: space-between;
+    align-items: flex-end;                                                  /*alignement en bas du bloc*/
+}
+header h1
+{
+    font-family: 'playball', cursive;
+    font-size: 2.5em;
+}
+header h3
+{
+    font-family: 'Gelasio', serif;
+}
+
+
+
+nav ul
+{
+    display: flex;                  /*alignement horizontal*/
+    list-style-type: none;          /*pas de point dans la liste*/
+    font-family: 'Gelasio', serif;
+    color: black;
+}
+nav li
+{
+    margin-right: 15px;             /*espacement des puces*/
+}
+nav a
+{
+    font-size: 1.3em;               /*taille police nav*/
+    padding-bottom: 3px;            /*marge exterieur*/
+    text-decoration: none;          /*supprimer soulignement*/
+}
+nav a:hover
+{
+    color: rgb(131,022,024);      /*couleur survole*/
+    text-decoration: underline;     /*soulignement survole*/
+}
+
+
+
+#banniere
+{
+    background-image: url("images/sanfrancisco.jpg");           /*image de fond*/                                          
+    height: 200px;                                              /*hauteur bloc*/
+    border-radius: 10px;                                        /*angle banniere*/
+    box-shadow: 0px 3px 6px black;                           /*ombre banniere*/
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#bannieredescription
+{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(24,24,24,0.8);
+    color: white;
+    height: 50px;
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+    
+}
+.boutonrouge
+{
+    position: absolute;
+    bottom: 15px;
+    right: 5px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-image: url("images/fond_degraderouge.png");
+    text-decoration: none;
+    
+}
+
+
+
+section
+{
+    display: flex;
+    text-align: justify;
+    padding-top: 15px;
+}
+
+
+
+
+article
+{
+    flex: 3;
+    font-size: 0.8em;
+    margin-right: 20px;
+}
+.ico_epingle
+{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+article h1
+{
+    font-family: 'Gelasio', serif;
+    font-size: 1.5em;
+}
+
+
+
+
+aside
+{
+    flex: 1.2;
+    position: relative;
+    font-size: 0.8em;
+    color: white;
+    margin-left: 20px;
+    background-color: rgb(112,107,100);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 3px 6px  black;
+
+}
+aside h1
+{
+    font-family: 'Gelasio', serif;
+    font-size: 1.5em;
+}
+#flecheaside
+{
+    position: absolute;
+    top: 100px;
+    left: -12px;
+}
+#photozozor
+{
+    text-align: center;
+}
+#photozozor img
+{
+    border: 1px solid black;
+}
+
+
+
+
+footer
+{
+    display: flex;
+    background:  url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+footer h1
+{
+    font-size: 1.1em;
+    font-family: 'Gelasio', serif;
+}
+footer p
+{
+    font-size: 0.8em;
+}
+footer ul
+{
+    font-size: 0.8em;
+}
+#tweet
+{
+    width: 33%;
+}
+#photos
+{
+    width: 33%;
+}
+#mesamis
+{
+    width: 33%;
+}
+
+#photos img
+{
+    border: 1px solid #181818;
+    margin-right: 2px;
+}
+
+#amis
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#mesamis ul
+{
+    list-style-image: url('images/ico_liensexterne.png');
+    padding-left: 10px;
+}
+
+#mesamis a
+{
+    text-decoration: none;
+    color: #760001;
+}
+
+
+#page
+{
+    width: 900px;
+    margin: auto;
+}
+
+@media all and (max-width: 1024px)
+{
+    #page
+    {
+        width: auto;
+    }
+    nav
+    {
+        width: auto;
+        text-align: left;
+    }
+    nav ul
+    {
+        flex-direction: column;
+    }
+    nav li
+    {
+        padding-left: 4px;
+    }
+    nav a
+    {
+        font-size: 1.1em;
+    }
+    nav a:hover
+    {
+        border-bottom: 0;
+    }
+    #banniere
+    {
+        display: none;
+    }
+    section
+    {
+        flex-direction: column;
+    }
+    article, aside
+    {
+        width: auto;
+        margin-bottom: 15px;
+    }
+    #flecheaside
+    {
+        display: none;
+    }
+    #photozozor img
+    {
+        width: 110px;
+        float: right;
+        margin-left: 15px;
+    }
+    
+}
